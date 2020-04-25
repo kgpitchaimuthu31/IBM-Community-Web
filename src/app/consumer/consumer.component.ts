@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { CloudantService } from 'src/app/cloudant.service'
+import { CloudantService } from 'src/app/cloudant.service';
 
 @Component({
   selector: 'consumer',

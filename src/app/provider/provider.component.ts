@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { CloudantService } from 'src/app/cloudant.service';
 
 @Component({
   selector: 'provider',
@@ -9,7 +10,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class ProviderComponent implements OnInit {
 
   angForm: FormGroup;
-  constructor(private fb: FormBuilder) {
+  constructor(private cloundantService: CloudantService, private fb: FormBuilder) {
     this.createForm();
   }
 
