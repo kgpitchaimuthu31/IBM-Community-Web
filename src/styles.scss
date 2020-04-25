@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+    height: 100%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: auto;
+    height: 100%;
+}
+
+
+
+ .sidenav {
+    position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 60px !important;
+  display: flex !important;
+  align-items: center !important;
+  background-color: #343676 !important;
+  color: white !important;
+  font-weight: 600 !important;
+ }
+
+ .spacer {
+    flex: 1 !important;
+  }
+
+ .navItem{
+     margin-right: 50px;
+ } 
+
+ .navItemfirst{
+    margin-right: 50px;
+    margin-left: 100px;
+}
+
+.navItemlast{
+    margin-left: calc(100vw - 800px);
+}
+
+.card-container {
+    // display: flex !important;
+    //flex-wrap: wrap !important;
+    justify-content: center !important;
+    margin-top: 100px !important;
+    width: 1150px !important;
+    height: calc(100vh - 155px) !important;
+     align-items: center;
+     overflow-y: auto;
+  }
+
+  .home-container{
+    justify-content: center !important;
+    width: 1200px !important;
+    height: calc(100vh - 130px) !important;
+     align-items: center;
+     overflow-y: auto;
+  }
+
+ 

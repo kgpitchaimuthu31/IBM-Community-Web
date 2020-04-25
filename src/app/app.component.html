@@ -1,0 +1,31 @@
+<!-- nav -->
+<!-- <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/">Home</a>
+      <a class="nav-item nav-link" (click)="logout()">Logout</a>
+  </div>
+</nav> -->
+
+<!-- main app container -->
+<!-- <div class="container">
+      <div class="row">
+          <div class="col-sm-6 offset-sm-3">
+              <router-outlet></router-outlet>
+          </div>
+      </div>
+  </div> -->
+
+<div class="container">
+  <div class="sidenav" >
+    <mat-nav-list>      
+      <!-- <mat-nav-item class="navItemfirst" routerLink="/"> <span>Home</span> </mat-nav-item> -->
+      <mat-nav-item class="navItemfirst" routerLink="/"> <span>Maps</span> </mat-nav-item>
+      <mat-nav-item class="navItem" routerLink="/provider"> <span>Provider</span> </mat-nav-item>
+      <mat-nav-item class="navItem" routerLink="/consumer"> <span>Consumer</span> </mat-nav-item>          
+      <mat-nav-item class="navItemlast" routerLink="/login"> <span>Logout</span> </mat-nav-item>
+    </mat-nav-list>
+  </div>
+  
+    <router-outlet></router-outlet>
+  
+</div>

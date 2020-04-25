@@ -1,0 +1,28 @@
+.container {
+   
+    height: 100%;
+    align-items: center;
+    overflow-y: auto;
+ }
+ 
+ .formDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  margin-bottom: 10px;
+ }
+
+ .parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ .formField{
+  display: unset;
+  flex-direction: row;
+  width:60%;
+  min-width: 150px;
+}

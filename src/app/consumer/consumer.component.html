@@ -1,0 +1,42 @@
+<!-- app.component.html -->
+
+<div class="card-container">
+    <h3>
+        Welcome to Consumer Portal!!
+    </h3>
+    <form [formGroup]="angForm" novalidate>
+        <mat-form-field class="formField">
+            <mat-select placeholder="Select Store Name:" required  [(value)]="selectedStore" 
+                formControlName="storeName">
+                <mat-option *ngFor="let store of stores" [value]="store.id">
+                    {{store.full}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="formField">
+            <input matInput class="form-control" placeholder="Product Name" formControlName="productName" type="text">
+            <mat-error
+                *ngIf="angForm.controls['productName'].invalid && (angForm.controls['productName'].dirty || angForm.controls['productName'].touched) && angForm.controls['productName'].errors.required"
+                class="alert alert-danger">
+                Name is required.
+            </mat-error>
+        </mat-form-field>
+        
+        <mat-form-field class="formField">
+            <input matInput class="form-control" placeholder="Address" formControlName="address" type="text">
+            <mat-error *ngIf="angForm.controls['address'].invalid 
+        && (angForm.controls['address'].dirty || angForm.controls['address'].touched)
+        && angForm.controls['address'].errors.required" class="alert alert-danger">
+                email is required.
+            </mat-error>
+        </mat-form-field>
+        
+        <button type="submit" (click)="createDocument()" [disabled]="angForm.pristine || angForm.invalid"
+            class="btn btn-success">
+            Buy
+        </button>
+    </form>
+    <br />
+    <p>Form value: {{ angForm.value | json }}</p>
+    <p>Form status: {{ angForm.status | json }}</p>
+</div>

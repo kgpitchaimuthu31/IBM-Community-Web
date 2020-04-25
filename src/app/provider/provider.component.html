@@ -1,0 +1,54 @@
+<!-- app.component.html -->
+
+<div class="card-container">
+    <h3>
+        Welcome to Provider Portal!!
+    </h3>
+    <form [formGroup]="angForm" novalidate>
+        <div class="formDiv">
+            <mat-form-field class="formField">
+                <input matInput class="form-control" placeholder="Store Name" formControlName="storename" type="text">
+                <mat-error *ngIf="angForm.controls['storename'].invalid && (angForm.controls['storename'].dirty 
+                        || angForm.controls['storename'].touched) && angForm.controls['storename'].errors.required"
+                    class="alert alert-danger"> Name is required.</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="formDiv">
+            <mat-form-field class="formField">
+                <input matInput class="form-control" placeholder="Address" formControlName="address" type="text">
+                <mat-error *ngIf="angForm.controls['address'].invalid 
+        && (angForm.controls['address'].dirty || angForm.controls['address'].touched)
+        && angForm.controls['address'].errors.required" class="alert alert-danger">address is required.</mat-error>
+            </mat-form-field>
+        </div>
+        <div class="formDiv">
+            <mat-form-field class="formField">
+                <input matInput class="form-control" placeholder="Product Name" formControlName="productname"
+                    type="text">
+                <mat-error
+                    *ngIf="angForm.controls['productname'].invalid && (angForm.controls['productname'].dirty || angForm.controls['productname'].touched) && angForm.controls['productname'].errors.required"
+                    class="alert alert-danger">
+                    Product Name is required.
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="formDiv">
+            <mat-form-field class="formField">
+                <input matInput class="form-control" placeholder="Product Price" formControlName="price" type="text">
+            </mat-form-field>
+        </div>
+        <div class="formDiv">
+            <mat-form-field class="formField">
+                <input matInput class="form-control" placeholder="Product Quantity" formControlName="quantity"
+                    type="text">
+            </mat-form-field>
+        </div>
+        <button type="submit" (click)="createDocument()" [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
+            Save
+        </button>
+    </form>
+    <br />
+    <p>Form value: {{ angForm.value | json }}</p>
+    <p>Form status: {{ angForm.status | json }}</p>
+</div>

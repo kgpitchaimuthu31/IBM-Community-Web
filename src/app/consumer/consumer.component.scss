@@ -1,0 +1,14 @@
+.container {
+   
+   height: 100%;
+   align-items: center;
+   overflow-y: auto;
+}
+
+.formField{
+  display: unset;
+  flex-direction: row;
+  width:100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
